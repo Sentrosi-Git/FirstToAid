@@ -1,0 +1,24 @@
+<div class="wrapper" id="wrapper">
+  <p class="announcement">
+  <div class="card-group" id="card-group" data-active-card="login">
+    <div class="transition-animation" id="transition-animation">
+    <div class="card card-login" id="login">
+      <h1 class="title"> LOGIN</h1>
+      <hr/>
+
+<% if @current_user.present? %>
+  Welcome back <%= @current_user.email %>
+<% end %></p>
+
+  <%= link_to 'Find Help Now', scenes_path  %>
+  <% if @current_user.present? %>
+    <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
+  <% else %>
+    <%= link_to 'Register', new_user_path %>
+    <%= link_to 'Sign In', login_path %>
+  <% end %>
+
+</div>
+</div>
+</div>
+</div>

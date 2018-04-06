@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firsttoaid</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= tag :meta, name: 'google_maps', content: 'AIzaSyC4X52VByScJMRVtVKUk0lMVOzfYNoSJb8' %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+  </body>
+</html>

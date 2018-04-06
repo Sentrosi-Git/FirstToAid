@@ -1,0 +1,18 @@
+<h1>Welcome Back <%= @user.name %></h1>
+
+<%= link_to image_tag(@user.image, :alt => @user.title, :class => 'feature'), @user.image %>
+
+<!-- <ul>
+  <li><%= @user.title %></li>
+  <% if @user.artist.present? %>
+    <li><%= link_to @user.artist.name, @user.artist %></li>
+  <% end %>
+  <li><%= @user.year %></li>
+  <li><%= @user.medium %></li>
+  <li><%= @user.style %></li>
+</ul> -->
+
+<div class="controls">
+  <%= link_to 'Edit user', edit_user_path(@user) %>
+  <%= link_to 'Delete user', @user, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
