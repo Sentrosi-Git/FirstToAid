@@ -10,5 +10,6 @@
 #
 
 class Equipment < ApplicationRecord
+    self.table_name = "equipments"
     has_and_belongs_to_many :users, :optional => true
 end

@@ -1,14 +1,3 @@
-# Rails.application.routes.draw do
-#   resources :scenes do
-#     resources :skills
-#     resources :equipments
-#     collection do
-#       get :map
-#     end
-#   end
-#   route to: 'scenes#index'
-# end
-
 
 # Rails.application.routes.draw do
   # get 'scenes/index'
@@ -31,13 +20,10 @@
 #   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 # end
 Rails.application.routes.draw do
-  # get 'scenes/index'
-  #
-  # get 'scenes/show'
 
   root :to => 'pages#home'
 
-  resources :users, :only => [:new, :create]
+  resources :users, :only => [:new, :create, :edit, :update]
 
   get '/login' => 'session#new'        # Sign in form
   post '/login' => 'session#create'    # Sign in action
@@ -46,7 +32,19 @@ Rails.application.routes.draw do
 
   resources :scenes
 
-get '/scenes/new' => 'scenes#new'
+get '/scenes/new' => 'scenes#new' # new map request
 
 get '/scenes/:id' => 'scenes#show'
 end
+
+
+# Rails.application.routes.draw do
+#   resources :scenes do
+#     resources :skills
+#     resources :equipments
+#     collection do
+#       get :map
+#     end
+#   end
+#   route to: 'scenes#index'
+# end

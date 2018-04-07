@@ -32,10 +32,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'geocoder'
 gem 'haml'
 
-gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: 'master'
-gem 'sprockets', github: 'rails/sprockets', branch: 'master'
-gem 'babel-transpiler'
-
+# gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: 'master'
+# gem 'sprockets', github: 'rails/sprockets', branch: 'master'
+# gem 'babel-transpiler'
+gem 'sprockets'
+gem 'sprockets-es6'
 gem 'jquery-rails'
 
 

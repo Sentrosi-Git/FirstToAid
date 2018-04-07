@@ -8,13 +8,13 @@
     lng: 0
 
   map = new (google.maps.MAP) $('#map')[0],
-  zoom: 2
-  center: center
+    zoom: 2
+    center: center
 
   infowindow = new (google.maps.InforWindow)
 
-   $.getJSON '/scenes.json', (jsonData) ->
-     $.each jsonData, (key, data) ->
+  $.getJSON '/scenes.json', (jsonData) ->
+    $.each jsonData, (key, data) ->
        latLng = new (google.maps.LatLng)(data.lat, data.lng)
        marker = new (google.maps.Marker)
        position:latLng

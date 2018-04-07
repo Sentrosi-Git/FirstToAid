@@ -12,8 +12,8 @@
  *
  *= require_tree .
  *= require_self
- */
 
+/*
   // Variables
  $black: #000;
  $pink: #fbc2eb;
@@ -285,4 +285,4 @@
  			transform: translateX(-50%) scale(1);
  		}
  	}
- } 
+ }  */

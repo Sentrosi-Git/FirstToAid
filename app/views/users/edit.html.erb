@@ -1,22 +1,40 @@
-<!-- <h1>Sign Up</h1>
+<!-- Skill.destroy_all
+s1 = Skill.create :name => 'Fire Warden'
+s2 = Skill.create :name => 'CPR'
+s3 = Skill.create :name => "Medical Professional"
+s4 = Skill.create :name => "Incident Controller"
+s5 = Skill.create :name => "First Aid"
+s6 = Skill.create :name => "Security Controller"
 
-<% if @user.errors.any? %>
-  <ol>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg.capitalize %></li>
-    <% end %>
-  </ol>
-<% end %>
+Equipment.destroy_all
+e1 = Equipment.create :item => 'First Aid Kit'
+e2 = Equipment.create :item => 'Burn Kit'
+e3 = Equipment.create :item => 'Defibrilator'
+e4 = Equipment.create :item => 'Fire Extinguisher'
+e5 = Equipment.create :item => 'Emergency Blanket'
+e6 = Equipment.create :item => 'Flashlight' -->
+
+
+
+
+
+<h1>Edit your profile</h1>
 
 <%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email, :required => true %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.label :photo %>
+  <%= f.text_field :photo %>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.collection_check_boxes :skill_ids, Skill.all, :id, :name  %>
 
-  <%= f.submit "Sign up!" %>
-<% end %> -->
+  <%= f.collection_check_boxes :equipment_ids, Equipment.all, :id, :item  %>
+
+  <!-- <%= check_box_tag(:pet_cat) %>
+  <%= label_tag(:pet_cat, "I own a cat") %> -->
+
+
+
+  <%= f.submit %>
+<% end %>

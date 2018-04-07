@@ -14,12 +14,12 @@
 //= require turbolinks
 //= require_tree .
 //= require_self
-//= require main.es6
 
-$(document).on('turbolinks:load', function(){
-  if ($()'#map').length > 0){
-    // Get the google maps api
-    var google_map = $('meta[name=google_maps]').attr("context");
-    $.getScript(`https://maps.googleapis.com/maps/api/js?key=${google_map}&callback=initMap`);
-  }
-})
+//
+// $(document).on('turbolinks:load', function(){
+//   if ($()'#map').length > 0){
+//     // Get the google maps api
+//     var google_map = $('meta[name=google_maps]').attr("context");
+//     $.getScript(`https://maps.googleapis.com/maps/api/js?key=${google_map}&callback=initMap`);
+//   }
+// })

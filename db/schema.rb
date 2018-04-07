@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20180405012129) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "equipment", force: :cascade do |t|
+  create_table "equipments", force: :cascade do |t|
     t.text "item"
     t.text "equipimg"
     t.datetime "created_at", null: false
